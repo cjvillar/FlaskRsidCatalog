@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <body>
+{% extends "layout.html" %}
+{% block content %}
+   <div class="rsID">
+     <h1>rsID Look Up:</h1>
+     <p>Get variant info from LitVar</p>
+       <form method="POST" action="/rsID">
+           <p>RSid: <input type="text" name="rs" placeholder="rs121913527" ></p>
+           <p><input type="submit" value="Submit"></p>
+       </form>
+       {% if get_id_response %}
+       <h3>rsID:</h3> 
+         <p>{{get_id_response[0]}} </p>
+       <h3>Gene:</h3> 
+         <p>{{get_id_response[3]['name']}}</p>
+       <h3>Diseases:</h3>  
+       {% for k in get_id_response[1].keys() %}
+       <li>
+       {{k}}
+       </li>
+       {%endfor%}
+       {% endif %}
+       {%endblock%}
+   </div>
+  </body>
+</html>
