@@ -5,7 +5,8 @@ To get started:
 3. . venv/bin/activate
 4. pip install Flask
 5. export FLASK_APP=hello.py
-6. flask Run
+6.export 'PYTHONPATH="${PYTHONPATH}:/Users/chris/flask_project'
+7. flask Run
 
 To do:
 1. fix aethstetic.

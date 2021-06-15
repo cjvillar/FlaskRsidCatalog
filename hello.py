@@ -2,7 +2,7 @@ from flask import Flask, render_template, redirect, url_for, request, session
 from requests.api import get
 app = Flask(__name__)
 
-from litvar_api import litvar_url
+from scripts.litvar_api import litvar_url
 
 @app.route('/')
 def home():

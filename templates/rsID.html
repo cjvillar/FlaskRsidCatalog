@@ -7,7 +7,7 @@
      <h1>rsID Look Up:</h1>
      <p>Get variant info from LitVar</p>
        <form method="POST" action="/rsID">
-           <p>RSid: <input type="text" name="rs" placeholder="rs121913527" ></p>
+           <p>RSid: <input type="text" name="rs" placeholder="rs121913527" required ></p>
            <p><input type="submit" value="Submit"></p>
        </form>
        {% if get_id_response %}
