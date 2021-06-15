@@ -1,6 +1,6 @@
 
 from scripts.litvar_api import litvar_url
-import pytest
+
 
 
 
