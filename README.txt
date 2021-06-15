@@ -10,7 +10,8 @@ To get started:
 
 To do:
 1. fix aethstetic.
-2. Add scripts folder for python scripts.
-3. add more documentation
-4. add functionality
+2. fix actions 
+3. Add scripts folder for python scripts.
+4. add more documentation
+5. add functionality
 
