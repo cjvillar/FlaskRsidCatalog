@@ -11,10 +11,14 @@
            <p><input type="submit" value="Submit"></p>
        </form>
        {% if get_id_response %}
-       <h3>rsID:</h3> 
-         <p>{{get_id_response[0]}} </p>
+       <h3>rsID:</h3>
+         <a href="https://www.ncbi.nlm.nih.gov/snp/{{get_id_response[0]}}">
+         <li>{{get_id_response[0]}} </li>
+         </a>
        <h3>Gene:</h3> 
-         <p>{{get_id_response[3]['name']}}</p>
+         <a href="https://www.ncbi.nlm.nih.gov/gene/?term={{get_id_response[3]['name']}}">
+         <li>{{get_id_response[3]['name']}}</li>
+         </a>
        <h3>Diseases:</h3>  
        {% for k in get_id_response[1].keys() %}
        <li>
