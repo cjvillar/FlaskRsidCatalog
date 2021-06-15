@@ -18,7 +18,9 @@
        <h3>Diseases:</h3>  
        {% for k in get_id_response[1].keys() %}
        <li>
+       <a href="https://www.ncbi.nlm.nih.gov/clinvar/?term={{k}}">
        {{k}}
+       </a>
        </li>
        {%endfor%}
        {% endif %}
