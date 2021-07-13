@@ -24,7 +24,7 @@ Notes:
 Create start.sh
 Start virtual env
 Pip install requirements.txt
-From hello import db, users, variants
+From hello import db, Users, variants
 db.create_all()
 
 Sqlight3
@@ -33,13 +33,5 @@ DROP table user;
 .tables
 PRAGMA table_info(table_name);
 
-Python
-From hello import db, users, variants
-db.create_all()
-Create start.sh
-Start virtual env
-Pip install requirements.txt
-From hello import db, users, variants
-db.create_all()
 
 
