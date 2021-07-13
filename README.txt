@@ -4,9 +4,10 @@ To get started:
 2. Create a VENV, python3 -m venv venv
 3. . venv/bin/activate
 4. pip install Flask
-5. export FLASK_APP=hello.py
-6.export 'PYTHONPATH="${PYTHONPATH}:/Users/chris/flask_project'
-7. flask Run
+5. pip install -r requirments
+6. export FLASK_APP=hello.py
+7.export 'PYTHONPATH="${PYTHONPATH}:/Users/chris/flask_project'
+8. flask Run
 
 To do:
 1. fix aethstetic.
