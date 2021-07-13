@@ -9,10 +9,37 @@ To get started:
 7.export 'PYTHONPATH="${PYTHONPATH}:/Users/chris/flask_project'
 8. flask Run
 
+
+
+
 To do:
 1. fix aethstetic.
 2. fix actions 
 3. Add scripts folder for python scripts.
 4. add more documentation
 5. add functionality
+
+
+Notes:
+Create start.sh
+Start virtual env
+Pip install requirements.txt
+From hello import db, users, variants
+db.create_all()
+
+Sqlight3
+.open db.sqlite3
+DROP table user;
+.tables
+PRAGMA table_info(table_name);
+
+Python
+From hello import db, users, variants
+db.create_all()
+Create start.sh
+Start virtual env
+Pip install requirements.txt
+From hello import db, users, variants
+db.create_all()
+
 
