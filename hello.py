@@ -1,4 +1,4 @@
-from requests.api import get
+#from requests.api import get
 from flask_wtf import FlaskForm 
 from flask_bootstrap import Bootstrap
 from scripts.litvar_api import litvar_url
@@ -137,7 +137,7 @@ def rsID():
             return render_template('rsID.html', get_id_response =litvar_url(rsid))
 
 
-        #return render_template('rsID.html')
+    return render_template('rsID.html')
 
     
 if __name__ == '__main__':
