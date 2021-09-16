@@ -9,8 +9,8 @@
 7. export 'PYTHONPATH="${PYTHONPATH}:/Users/chris/flask_project'
 8. flask Run
 
-# When Running you should see this (after loggin in).
-![alt text](https://github.com/cjvillar/cjvillar.github.io/blob/main/images/FLASK_APP.png "Logo Title Text 1")
+# When running you should see this (after loggin in).
+![alt text](https://github.com/cjvillar/cjvillar.github.io/blob/main/images/FLASK_APP.png "rsID page")
 
 
 # To do:
