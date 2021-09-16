@@ -21,17 +21,17 @@
 
 
 *Notes*:
-⋅⋅⋅Create start.sh
-⋅⋅⋅Start virtual env
-⋅⋅⋅Pip install requirements.txt
-⋅⋅⋅From hello import db, Users, variants
-⋅⋅⋅db.create_all()
+⋅⋅⋅ Create start.sh
+⋅⋅⋅ Start virtual env
+⋅⋅⋅ Pip install requirements.txt
+⋅⋅⋅ From hello import db, Users, variants
+⋅⋅⋅ db.create_all()
 
-⋅⋅⋅Sqlight3
-⋅⋅⋅.open db.sqlite3
-⋅⋅⋅DROP table user;
-⋅⋅⋅.tables
-⋅⋅⋅PRAGMA table_info(table_name);
+⋅⋅⋅ Sqlight3
+⋅⋅⋅ .open db.sqlite3
+⋅⋅⋅ DROP table user;
+⋅⋅⋅ .tables
+⋅⋅⋅ PRAGMA table_info(table_name);
 
 
 
