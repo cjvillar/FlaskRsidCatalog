@@ -4,9 +4,9 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Helvetica",Arial, Helvetica, sans-serif;
   color: rgb(250, 250, 250);
-  background-color: #ddd4d4f6;
+  background-color: #fcfcfcf6;
 }
 /*
  * Formatting the header area
@@ -121,6 +121,24 @@ td {
 
 
 
+.aa:link, .aa:visited {
+  margin-left: 540px;
+  background-color: white;
+  color: black;
+  border: 2px solid rgb(62, 65, 62);
+  padding: 10px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  
+}
+
+.aa:hover, .aa:active {
+  background-color: rgb(88, 90, 88);
+  color: white;
+}
+
+
 .menu {
   float: right;
   margin-top: 8px;
@@ -132,7 +150,7 @@ td {
   margin-left: 35px;
 }
 .menu li a {
-  color: #444;
+  color: rgb(255, 251, 251);
   text-decoration: none;
 }
 

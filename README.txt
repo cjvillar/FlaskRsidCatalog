@@ -6,7 +6,7 @@ To get started:
 4. pip install Flask
 5. pip install -r requirments
 6. export FLASK_APP=hello.py
-7.export 'PYTHONPATH="${PYTHONPATH}:/Users/chris/flask_project'
+7. export 'PYTHONPATH="${PYTHONPATH}:/Users/chris/flask_project'
 8. flask Run
 
 

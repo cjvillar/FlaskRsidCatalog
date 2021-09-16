@@ -10,6 +10,7 @@ def litvar_url(rs):
     rs_id = data["id"]
     gene = data["gene"]
     diseases = data["diseases"]
+    
     return rs_id,diseases, response,gene, data.keys()
 
 
