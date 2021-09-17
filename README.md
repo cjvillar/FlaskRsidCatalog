@@ -18,9 +18,8 @@
 
 
 # To do:
-1. fix aethstetic.
-2. fix actions 
-3. Add scripts folder for python scripts.
+1. fix aethstetic. 
+2. fix actions by adjusting linter 
 4. add more documentation
 5. add functionality
 
