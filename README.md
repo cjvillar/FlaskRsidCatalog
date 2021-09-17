@@ -1,5 +1,7 @@
 ![Pytest CI](https://github.com/cjvillar/flask_template/actions/workflows/ci_tests.yml/badge.svg)
 
+![Pylint](https://github.com/cjvillar/flask_template/actions/workflows/pylint.yml/badge.svg)
+
 # This is a basic flask app set up project.
 ### To get started:
 1. Clone Repo.
