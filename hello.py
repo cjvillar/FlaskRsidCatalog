@@ -95,7 +95,7 @@ def login():
         return '<h1>Invalid username or password</h1>'
 
     return render_template('home_page.html', register_form=register_form, login_form=login_form, logged_in_user = current_user.username)
-       
+
      
 @app.route('/home_page')
 @login_required
@@ -103,10 +103,10 @@ def home():
     return render_template('home_page.html', logged_in_user = current_user.username)
 
 @app.route('/logout')
-@login_required
 def logout():
-    logout_user()
-    return 'You are logged out.'
+    logout_user() 
+    return redirect(url_for('index'))
+    
 
 @app.route('/rsID/', methods=['GET','POST'])
 @login_required
