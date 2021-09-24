@@ -16,7 +16,7 @@
 # When running you should see this:
 ![alt text](https://github.com/cjvillar/flask_template/blob/master/images/log_in.png "Log In Page")
 
-# After loggin in or creating a new user navigate to "LitVar rsID lookup":
+# After logging in or creating a new user navigate to "LitVar rsID lookup":
 ![alt text](https://github.com/cjvillar/flask_template/blob/master/images/RSID_PAGE.png "rsID page")
 
 
