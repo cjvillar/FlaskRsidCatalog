@@ -14,7 +14,7 @@ jobs:
         - name: Set up Python
           uses: actions/setup-python@v1
           with:
-            python-version: 3.8
+            python-version: 3.9
 
         - name: Install Python dependencies
           run: pip install black flake8
@@ -23,6 +23,7 @@ jobs:
           uses: samuelmeuli/lint-action@v1
           with:
             github_token: ${{ secrets.github_token }}
+            auto_fix: ${{ github.event_name == 'workflow_dispatch' }}
             black: true
             flake8: true 
         
