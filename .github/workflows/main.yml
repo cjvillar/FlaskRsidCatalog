@@ -1,0 +1,29 @@
+name: Manual_Pylint
+
+on: workflow_dispatch
+
+jobs:
+    run-linters:
+      name: Run linters
+      runs-on: ubuntu-latest
+
+      steps:
+        - name: Check out Git repository
+          uses: actions/checkout@v2
+        
+        - name: Set up Python
+          uses: actions/setup-python@v1
+          with:
+            python-version: 3.9
+
+        - name: Install Python dependencies
+          run: pip install black flake8
+
+        - name: Run linters
+          uses: samuelmeuli/lint-action@v1
+          with:
+            github_token: ${{ secrets.github_token }}
+            auto_fix: ${{ github.event_name == 'workflow_dispatch' }}
+            black: true
+            flake8: true 
+        
