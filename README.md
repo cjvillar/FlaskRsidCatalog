@@ -32,13 +32,21 @@
 ##### Create start.sh
 ##### Start virtual env
 ##### Pip install requirements.txt
-##### From hello import db, Users, variants
+##### From hello import db, User, variant
 ##### db.create_all()
-##### Sqlight3
+##### sqlight3
 ##### .open db.sqlite3
 ##### DROP table user;
 ##### .tables
 ##### PRAGMA table_info(table_name);
+```
+.schema variant
 
-
-
+# need to make table look like this:
+CREATE TABLE variant (
+        rs_id VARCHAR(20), 
+        gene VARCHAR(20), 
+        diseases VARCHAR(20), 
+        PRIMARY KEY (rs_id)     
+);
+```

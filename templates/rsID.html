@@ -11,10 +11,12 @@
            <p><input type="submit" value="Submit"></p>
        </form>
        {% if get_id_response %}
-       <h3>rsID:</h3>
-         <a class="aa" href="https://www.ncbi.nlm.nih.gov/snp/{{get_id_response[0]}}">
-         {{get_id_response[0].strip('##')}} 
-         </a>
+       <!-- <button type="button" class="collapsible"> </button>-->
+       <!-- <div class="content"></div> -->
+      <h3>rsID:</h3>
+      <a class="aa" href="https://www.ncbi.nlm.nih.gov/snp/{{get_id_response[0]}}">
+      {{get_id_response[0].strip('##')}} 
+      </a>
        <h3>Gene:</h3> 
          <a class="aa" href="https://www.ncbi.nlm.nih.gov/gene/?term={{get_id_response[3]['name']}}">
          {{get_id_response[3]['name']}}
@@ -25,8 +27,25 @@
        <a class="aa" href="https://www.ncbi.nlm.nih.gov/clinvar/?term={{k}}"> 
         {{k}}
        </a>
-      
-      
+      <!-- </div> -->
+      <!-- {% block javascript %}
+      <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+        
+        for (i = 0; i < coll.length; i++) {
+          coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.display === "block") {
+              content.style.display = "none";
+            } else {
+              content.style.display = "block";
+            }
+          });
+        }
+        </script>
+      {%endblock%} -->
        
        {%endfor%}
        {% endif %}
