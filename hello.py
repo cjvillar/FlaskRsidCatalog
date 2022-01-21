@@ -110,9 +110,10 @@ def rsID():
         print(rs.strip('##'))
         valid_id = get_id_response 
         if valid_id != None:
-            return render_template('rsID.html', get_id_response =litvar_url(rsid))
-        else: 
-           return f'<h1 style="text-align:center">LitVar did not return any data for {rs}</h1>'
+            return render_template('rsID.html', get_id_response = litvar_url(rsid))
+        else:
+            return render_template('rsID.html', rs = rs)
+           
         # store in database
         # else:
         #     try:

@@ -48,6 +48,8 @@
       {%endblock%} -->
        
        {%endfor%}
+       {% elif rs %}
+       <h1 style="text-align:center">LitVar did not return any data for {{rs}}</h1>
        {% endif %}
        {%endblock%}
    </div>
