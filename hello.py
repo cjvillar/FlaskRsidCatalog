@@ -1,4 +1,3 @@
-#from requests.api import get
 from sqlalchemy.sql.schema import UniqueConstraint
 from flask_wtf import FlaskForm 
 from flask_bootstrap import Bootstrap
@@ -7,13 +6,12 @@ from wtforms.validators import InputRequired, Email, Length
 from wtforms import StringField, PasswordField, BooleanField
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask import Flask, render_template, redirect, url_for, request, session
-#import sqlite3 
+
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.orm import backref, relationship
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import Table, Column, Integer, ForeignKey
 from flask_login import LoginManager,login_required, UserMixin, login_user, logout_user, current_user
-
 
 app = Flask(__name__)
 bootstrap = Bootstrap(app)
@@ -25,13 +23,11 @@ db = SQLAlchemy(app)
 login_manager = LoginManager()
 login_manager.init_app(app)
 
-
 class User(UserMixin, db.Model):
     id = db.Column(db.Integer,primary_key=True)
     username = db.Column(db.String(30), unique=True)
     password = db.Column(db.String(80))
     
-
 class variant(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     rs_id = db.Column(db.String(20), primary_key=True)
@@ -43,7 +39,6 @@ class variant(db.Model):
         self.gene = gene
         self.diseases = diseases
         
-
 @login_manager.user_loader
 def load_user(user_id):
     return User.query.get(int(user_id))
@@ -56,7 +51,6 @@ class LoginForm(FlaskForm):
 class RegisterForm(FlaskForm):
     username = StringField('username', validators=[InputRequired(), Length(min=4, max=15)])
     password = PasswordField('password', validators=[InputRequired(), Length(min=8, max=80)])
-
 
 @app.route('/')
 def index():
@@ -95,7 +89,6 @@ def login():
         return '<h1>Invalid username or password</h1>'
 
     return render_template('home_page.html', register_form=register_form, login_form=login_form, logged_in_user = current_user.username)
-
      
 @app.route('/home_page')
 @login_required
@@ -107,20 +100,19 @@ def logout():
     logout_user() 
     return redirect(url_for('index'))
     
-
 @app.route('/rsID/', methods=['GET','POST'])
 @login_required
 def rsID():
     if request.method == "POST":
         rsid = request.form['rs']
-        # user_profile= User.user_variant  
         get_id_response = litvar_url(rsid)
-        #new_litvar_info = variant(rs_id=get_id_response[0],gene=get_id_response[3]['name'],diseases=str(get_id_response[1].keys()))#, user_profile=user_profile)
-        #rs_check = db.session.query(variant).filter_by(rs_id=rsid)
         rs = str(rsid)
         print(rs.strip('##'))
-        if rsid == rs: #this check illrelivent for now.
+        valid_id = get_id_response 
+        if valid_id != None:
             return render_template('rsID.html', get_id_response =litvar_url(rsid))
+        else: 
+           return f'<h1 style="text-align:center">LitVar did not return any data for {rs}</h1>'
         # store in database
         # else:
         #     try:
