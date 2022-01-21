@@ -113,40 +113,27 @@ def logout():
 def rsID():
     if request.method == "POST":
         rsid = request.form['rs']
-        print(rsid) #testing only delete later
         # user_profile= User.user_variant  
-        # get_id_response = litvar_url(rsid)
-        # new_litvar_info = variant(rs_id=get_id_response[0],gene=get_id_response[3]['name'],diseases=str(get_id_response[1].keys()))#, user_profile=user_profile)
-        # rs_check = db.session.query(variant).filter_by(rs_id=rsid)
-        # rs = str(rs_check)
-        # print(rs.strip('##'))
-        # if rsid == rs:
-        #     return render_template('rsID.html', get_id_response =litvar_url(rsid))
-        # # store in database
-        # else:
-
-        
         get_id_response = litvar_url(rsid)
-        print(get_id_response)
-        if get_id_response != None:
-            try:
-                variant(rs_id=get_id_response[0],gene=get_id_response[3]['name'],diseases=str(get_id_response[1].keys()))
-                return render_template('rsID.html', get_id_response =litvar_url(rsid))
-            
-            except:
-                if get_id_response == None:
-                    return '<script>function myFunction() {alert("I am an alert box!");}</script>'
-
-        return render_template('rsID.html')
-            # db.session.rollback()
-            # return '<h1>ERROR: {}</h1>'.format(error)
-
-        #return render_template('rsID.html', get_id_response =litvar_url(rsid))
-
-
-    # return render_template('rsID.html')
-
-    
+        #new_litvar_info = variant(rs_id=get_id_response[0],gene=get_id_response[3]['name'],diseases=str(get_id_response[1].keys()))#, user_profile=user_profile)
+        #rs_check = db.session.query(variant).filter_by(rs_id=rsid)
+        rs = str(rsid)
+        print(rs.strip('##'))
+        if rsid == rs: #this check illrelivent for now.
+            return render_template('rsID.html', get_id_response =litvar_url(rsid))
+        # store in database
+        # else:
+        #     try:
+        #         db.session.add(new_litvar_info)
+        #         db.session.add(new_gene)
+        #         db.session.add(new_diseases)
+        #         db.session.commit()
+        #     except Exception as error:
+        #         db.session.rollback()
+        #         return '<h1>ERROR: {}</h1>'.format(error)
+        #     return render_template('rsID.html', get_id_response =litvar_url(rsid))
+    return render_template('rsID.html')
+       
 if __name__ == '__main__':
     app.run(debug=True)
 
