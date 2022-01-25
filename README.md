@@ -28,17 +28,17 @@
 
 
 ## *Notes*:
-#### Initial set up with:
-##### Create start.sh
-##### Start virtual env
-##### Pip install requirements.txt
-##### From hello import db, User, variant
-##### db.create_all()
-##### sqlight3
-##### .open db.sqlite3
-##### DROP table user;
-##### .tables
-##### PRAGMA table_info(table_name);
+- Initial set up with:
+- Create start.sh
+- Start virtual env
+- Pip install requirements.txt
+- from hello import db, User, variant
+- db.create_all()
+- sqlight3
+- .open db.sqlite3
+- DROP table user;
+- .tables
+- PRAGMA table_info(table_name);
 ```
 .schema variant
 
