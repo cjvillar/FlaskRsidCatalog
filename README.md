@@ -34,7 +34,7 @@
 - Pip install requirements.txt
 - from hello import db, User, variant
 - db.create_all()
-- sqlight3
+- sqlite3
 - .open db.sqlite3
 - DROP table user;
 - .tables
