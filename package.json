@@ -1,0 +1,28 @@
+{
+  "name": "flask_template",
+  "version": "1.0.0",
+  "description": "test fask app ",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cypress:open": "cypress open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cjvillar/flask_template.git"
+  },
+  "author": "chris V",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cjvillar/flask_template/issues"
+  },
+  "homepage": "https://github.com/cjvillar/flask_template#readme",
+  "devDependencies": {
+    "cypress": "^11.2.0",
+    "cypress-dotenv": "^2.0.0",
+    "dotenv": "^16.0.3"
+  }
+}
