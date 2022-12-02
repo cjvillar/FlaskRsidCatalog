@@ -28,17 +28,24 @@
 
 
 ## *Notes*:
-- Initial set up with:
-- Create start.sh
-- Start virtual env
+- If set up, start up with:
+```bash
+flask_template: ./start.sh
+
+```
+
 - Pip install requirements.txt
-- from hello import db, User, variant
-- db.create_all()
-- sqlite3
-- .open db.sqlite3
-- DROP table user;
-- .tables
-- PRAGMA table_info(table_name);
+#Set up DB:
+from hello import db, User, variant
+db.create_all()
+exit()
+
+#Open sqlite3 in terminal:
+sqlite3
+.open db.sqlite3
+ DROP table user;
+ .tables
+PRAGMA table_info(table_name);
 ```
 .schema variant
 
@@ -49,4 +56,7 @@ CREATE TABLE variant (
         diseases VARCHAR(20), 
         PRIMARY KEY (rs_id)     
 );
+
+
+.quit; to exit sqlite
 ```
