@@ -23,7 +23,7 @@ Login
         {{ register_form.hidden_tag() }}
         {{ wtf.form_field(register_form.username, id='new_username') }}
         {{ wtf.form_field(register_form.password, id='new_password') }}
-        <button class="btn btn-outline-secondary" type="Submit">Sign Up</button>
+        <button class="btn btn-outline-secondary" type="Submit">Create User</button>
       </form>
       {% with messages = get_flashed_messages() %}
       {% if messages %}
