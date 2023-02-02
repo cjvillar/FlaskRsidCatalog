@@ -1,0 +1,235 @@
+
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: "Helvetica",Arial, Helvetica, sans-serif;
+    color: rgb(235, 240, 241);
+    background-color: #787272f6;
+  }
+  .form-signin {
+    max-width: 330px;
+    padding: 15px;
+    margin: 0 auto;
+  }
+  .form-signin .form-signin-heading,
+  .form-signin .checkbox {
+    margin-bottom: 10px;
+  }
+  .form-signin .checkbox {
+    font-weight: normal;
+  }
+  .form-signin .form-control {
+    position: relative;
+    height: auto;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+    padding: 10px;
+    font-size: 16px;
+  }
+  .form-signin .form-control:focus {
+    z-index: 2;
+  }
+
+  .form-signin input[type="password"] {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+
+  .btn {
+    color: rgb(66, 99, 110);
+  }
+
+  .banner {
+    width: 1200px;
+    margin: 0 auto;
+    background-color: #787272f6;
+    background-size: cover;
+  }
+
+  
+/* below is css addded from main  edit for homepage */
+
+/* body {
+  margin: 0;
+  padding: 0;
+  font-family: "Helvetica",Arial, Helvetica, sans-serif;
+  color: rgb(250, 250, 250);
+  background-color: #fcfcfcf6;
+} */
+
+/*
+ * Formatting the header area
+ */
+header {
+  background-color: #1a1818f6;
+  height: 35px;
+  width: 100%;
+  opacity: .9;
+  margin-bottom: 10px;
+}
+header h1.logo {
+  margin: 0;
+  font-size: 1.7em;
+  color: #fff;
+  text-transform: uppercase;
+  float: left;
+}
+/* header h1.logo:hover {
+  color: rgba(104, 110, 110, 0.808);
+  text-decoration: none;
+  text-align: right;
+  
+} */
+/*
+ * Centering the body content
+ */
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  background-color: #1a1818f6;
+  background-size: cover;
+}
+
+
+div.home {
+  padding: 10px 0 30px 0;
+  margin-top: 40px;
+  background-color: #e3e3eb;
+  -webkit-border-radius: 6px;
+      -moz-border-radius: 6px;
+        border-radius: 6px;
+  
+}
+div.rsID {
+  padding: 10px 0 30px 0;
+  margin-top: 40px;
+  background-color: #f4f7f8;
+  -webkit-border-radius: 6px;
+     -moz-border-radius: 6px;
+          border-radius: 6px;
+}
+
+h1 {
+  font-size: 3em;
+  margin-top: 40px;
+  text-align: center;
+  letter-spacing: -2px;
+  color:rgb(32, 28, 28);
+}
+
+h2 {
+  font-size: 3em;
+  margin-top: 40px;
+  text-align: center;
+  letter-spacing: -2px;
+}
+h3 {
+  font-size: 2em;
+  font-weight: 100;
+  margin-top: 30px;
+  text-align: center;
+  letter-spacing: -1px;
+  color: rgb(32, 28, 28);
+}
+
+p {
+  font-size: 1em;
+  margin-top: 20px;
+  text-align: center;
+  letter-spacing: 2px;
+  color: black;
+}
+
+li {
+  font-size: 1em;
+  margin-top: 20px;
+  text-align: center;
+  letter-spacing: 2px;
+  color: black;
+
+}
+
+th {
+  font-size: 1em;
+  margin-top: 20px;
+  text-align: center;
+  letter-spacing: 2px;
+  color: black;
+
+}
+
+
+td {
+  font-size: 1em;
+  margin-top: 20px;
+  text-align: center;
+  letter-spacing: 2px;
+  color: black;
+
+}
+
+
+
+.aa:link, .aa:visited {
+  margin-left: 540px;
+  background-color: white;
+  color: black;
+  border: 2px solid rgb(62, 65, 62);
+  padding: 10px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  
+}
+
+.aa:hover, .aa:active {
+  background-color: rgb(88, 90, 88);
+  color: white;
+}
+
+
+.menu {
+  float: right;
+  margin-top: 8px;
+}
+.menu li {
+  display: inline;
+}
+.menu li + li {
+  margin-left: 35px;
+}
+.menu li a {
+  color: rgb(255, 251, 251);
+  text-decoration: none;
+}
+
+.collapsible {
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: #555;
+}
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+
+.flash {
+  font-size: 2em;
+  color: tomato;
+  position:absolute;
+}
