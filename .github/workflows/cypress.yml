@@ -1,0 +1,13 @@
+name: testing cypress with server   
+on: [push]
+jobs:
+  cypress-run:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Cypress run
+        uses: cypress-io/github-action@v5
+        with:
+          start: npm start
+          wait-on: 'http://127.0.0.1:5000/'
