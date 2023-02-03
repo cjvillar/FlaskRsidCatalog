@@ -1,8 +1,7 @@
 name: testing cypress   
 on: [push]
 jobs:
-  build flask:
-
+  build-flask:
     runs-on: ubuntu-latest
     strategy:
       max-parallel: 4
@@ -25,9 +24,7 @@ jobs:
       run: |
         export FLASK_APP=hello.py
         flask run
-  
-  
-  
+    
   cypress-run:
     runs-on: ubuntu-22.04
     steps:
