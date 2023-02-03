@@ -18,18 +18,11 @@ jobs:
     - name: run_flask
       run: |
         export FLASK_APP=hello.py
-
         flask run
-
-  cypress-run:
-    runs-on: ubuntu-22.04
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-      - name: Sleep for 30 seconds
-        run: sleep 30s
-        shell: bash
-      - name: Cypress run
+        
+     - name: Cypress run
         uses: cypress-io/github-action@v5
         with:
           start: npm run cypress:run
+
+  
