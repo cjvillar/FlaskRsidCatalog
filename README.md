@@ -2,7 +2,10 @@
 ![Manual Lint](https://github.com/cjvillar/flask_template/actions/workflows/main.yml/badge.svg)
 ![Pylint](https://github.com/cjvillar/flask_template/actions/workflows/pylint.yml/badge.svg)
 
-# This is a basic flask app set up project.
+# This is a basic Flask CRUD app.
+
+This app is to be used for testing. 
+
 ### To get started:
 1. Clone Repo.
 2. Create a VENV, python3 -m venv venv
