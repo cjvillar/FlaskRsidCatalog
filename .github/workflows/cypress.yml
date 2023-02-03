@@ -24,17 +24,4 @@ jobs:
         uses: cypress-io/github-action@v5
         with:
           start: npm run cypress:run
-   
-    
-    
-  # cypress-run:
-  #   if: ${{build-flask.run_flask}}
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - name: check_out
-  #       uses: actions/checkout@v3
-  #     - name: cypress_run
-  #       uses: cypress-io/github-action@v5
-  #       with:
-  #         start: npm run cypress:run
-          
+     
