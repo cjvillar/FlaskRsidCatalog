@@ -21,6 +21,7 @@ jobs:
         flask run
     
   cypress-run:
+    needs: build-flask
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
