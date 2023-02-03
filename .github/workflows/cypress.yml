@@ -18,15 +18,15 @@ jobs:
     - name: run_flask
       run: |
         export FLASK_APP=hello.py
+
         flask run
 
   cypress-run:
     runs-on: ubuntu-22.04
-    needs: 'build-flask.install_dependencies'
     steps:
       - name: Checkout
         uses: actions/checkout@v3
       - name: Cypress run
         uses: cypress-io/github-action@v5
         with:
-          start: npm run cypress:run
+          start: sleep 20 | npm run cypress:run
