@@ -135,9 +135,7 @@ def login():
         flash("Invalid username or password")
         return redirect("/")
 
-    return render_template(
-        "home_page.html", register_form=register_form, login_form=login_form
-    )
+    return render_template("signup.html", register_form=register_form)
 
 
 @app.route("/home_page")
