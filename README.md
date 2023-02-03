@@ -20,11 +20,11 @@
 ![alt text](https://github.com/cjvillar/flask_template/blob/master/images/RSID_PAGE.png "rsID page")
 
 
-# To do:
-1. fix aethstetic. 
-2. fix actions by adjusting linter 
-4. add more documentation
-5. add functionality
+# Run Cypress Test:
+1. Complete steps above. 
+2. Run init_db.py *WARNING: this clears the Users db* 
+4. In new terminal window, npm run cypress:run
+
 
 
 ## *Notes*:
