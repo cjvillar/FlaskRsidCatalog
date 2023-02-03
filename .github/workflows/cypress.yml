@@ -5,29 +5,36 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
-    - name: Set up Python 
+    - name: set_up_python 
       uses: actions/setup-python@v4
       with:
         python-version: "3.10"
-    - name: Install Dependencies
+    - name: install_dependencies
       run: |
         python -m pip install --upgrade pip
         pip install -r requirements.txt
         python init_db.py
         
-    - name: Run Flask
+    - name: run_flask
       run: |
         export FLASK_APP=hello.py
         flask run
-    
-  cypress-run:
-    needs: build-flask
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-      - name: Cypress run
+
+     - name: cypress_run
         uses: cypress-io/github-action@v5
         with:
           start: npm run cypress:run
+   
+    
+    
+  # cypress-run:
+  #   if: ${{build-flask.run_flask}}
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: check_out
+  #       uses: actions/checkout@v3
+  #     - name: cypress_run
+  #       uses: cypress-io/github-action@v5
+  #       with:
+  #         start: npm run cypress:run
           
