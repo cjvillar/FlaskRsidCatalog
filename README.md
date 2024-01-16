@@ -4,8 +4,7 @@
 
 # Flask Rsid Catalog 
 A Flask-based web application focused on retrieving and storing rsID information. (CRUD App)
-
-This app is a WIP currently used for testing. 
+This app is a WIP. 
 
 ## To get started:
 1. Clone Repo.
@@ -20,9 +19,9 @@ This app is a WIP currently used for testing.
 4. Install requirements and run flask:
 ```bash   
 pip install Flask
-pip install -r requirements
-export FLASK_APP=hello.py
-export 'PYTHONPATH="${PYTHONPATH}:/Users/chris/flask_project'
+pip install -r requirements.txt
+export FLASK_APP=app.py
+export 'PYTHONPATH="${PYTHONPATH}:/path/to/FlaskRsidCatalog'
 flask Run
 ```
 
@@ -33,14 +32,24 @@ flask Run
 ![alt text](https://github.com/cjvillar/flask_template/blob/master/images/RSID_PAGE.png "rsID page")
 
 
-## Run Cypress Test:
+## TODO:
+- Code:
+1. Break up app.py. Example, separate Models from app code.
+2. Use secure key.
+
+- Functionality:
+1. Add File input for bulk searches.
+2. Add Delete feature.
+3. Upgrade to Postgres
+
+
+### Run Cypress Test:
 1. Complete the steps above. 
 2. Run init_db.py *WARNING: this clears the Users db* 
 4. In new terminal window, npm run cypress:run
 
 
-
-## *Notes*:
+### *Notes*:
 If set up, start-up with:
 ```bash
 ./start.sh
@@ -48,14 +57,14 @@ If set up, start-up with:
 
 Pip install requirements.txt
 
-## Set up DB:
+### Set up DB:
 ```python
-from hello import db, User, variant
+from app import db, User, Variant
 db.create_all()
 exit()
 ```
 
-## Open sqlite3 in terminal:
+### Open sqlite3 in terminal:
 ```bash
 sqlite3
 .open db.sqlite3
@@ -66,14 +75,13 @@ PRAGMA table_info(table_name);
 ```bash
 .schema variant
 
-# need to make table look like this:
+# need to make tables look like this:
 CREATE TABLE variant (
         rs_id VARCHAR(20), 
         gene VARCHAR(20), 
         diseases VARCHAR(20), 
         PRIMARY KEY (rs_id)     
 );
-
 
 .quit; to exit sqlite
 ```

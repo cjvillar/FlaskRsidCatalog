@@ -1,10 +1,11 @@
 """
-Place holder script for testing automation ith github
+Place holder script for testing automation with github
 So far it only drops and recreates the user table
 for a 'reset'
 """
 
-from hello import db, User, variant
+from app import db, User, Variant
+
 User.__table__.drop(db.engine)
 User.__table__.create(db.engine)
 print("User Table Reset")
@@ -13,4 +14,3 @@ print("User Table Reset")
 # test_user = User(username="", password="")
 # db.session.add(test_user)
 # db.session.commit()
-
