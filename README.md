@@ -43,7 +43,7 @@ flask Run
 ## *Notes*:
 If set up, start-up with:
 ```bash
-flask_template: ./start.sh
+./start.sh
 ```
 
 Pip install requirements.txt
